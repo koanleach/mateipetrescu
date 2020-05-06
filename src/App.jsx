@@ -1,16 +1,45 @@
-import React from "react";
-import wip from "./imgs/wip.svg";
-import "./App.css";
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <div>
-        <img src={wip} alt="work-in-progress" />
-        <p>... in progress ...</p>
+import Toolbar from "./components/Toolbar/Toolbar";
+import SideDrawer from "./components/SideDrawer/SideDrawer";
+import Backdrop from "./components/Backdrop/Backdrop";
+
+class App extends Component {
+  state = {
+    sideDrawerOpen: false,
+  };
+
+  drawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return { sideDrawerOpen: !prevState.sideDrawerOpen };
+    });
+  };
+
+  backdropClickHandler = () => {
+    this.setState({ sideDrawerOpen: false });
+  };
+
+  render() {
+    let sideDrawer;
+    let backdrop;
+
+    if (this.state.sideDrawerOpen) {
+      sideDrawer = <SideDrawer />;
+      backdrop = <Backdrop click={this.backdropClickHandler} />;
+    }
+
+    return (
+      <div style={{ height: "100%" }}>
+        <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
+        {sideDrawer}
+        {backdrop}
+
+        <main style={{ marginTop: "64px" }}>
+          <p>PageContent</p>
+        </main>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
