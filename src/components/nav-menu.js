@@ -13,7 +13,7 @@ const activeStyle = { backgroundColor: "black", color: "white" };
 export default () => (
   <aside>
     <Header>
-      <Image src={logo} />
+      <Image src={logo} logo/>
     </Header>
     <Nav>
       <NavLink to="/" exact activeStyle={activeStyle}>

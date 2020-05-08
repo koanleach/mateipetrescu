@@ -5,8 +5,8 @@ export default styled.img`
   padding: 10px;
 
   ${(props) =>
-    props.nav &&
+    props.logo &&
     css`
-      color: "green";
+        width: 20px;
     `};
 `;
