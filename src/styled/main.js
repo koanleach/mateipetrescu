@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
 
-export default styled.nav`
-  width: 600;
+export default styled.main`
   display: flex;
   flex-direction: column;
-  background-color: lightcoral;
-  padding: 20px;
+  background-color: lightgreen;
+  width: 100%;
+  padding: 10px;
 `;

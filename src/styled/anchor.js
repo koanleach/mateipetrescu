@@ -1,12 +1,13 @@
 import styled, { css } from "styled-components";
 
-export default styled.button`
+export default styled.a`
   width: 100px;
   cursor: pointer;
 
+
   ${(props) =>
-    props.primary &&
+    props.nav &&
     css`
-      background: lightcoral;
-    `}
+      color: "green";
+    `};
 `;
