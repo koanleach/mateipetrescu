@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export default styled.nav`
   width: 600;
@@ -6,4 +6,5 @@ export default styled.nav`
   flex-direction: column;
   background-color: lightcoral;
   padding: 20px;
+  text-transform: uppercase;
 `;
