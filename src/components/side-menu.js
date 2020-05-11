@@ -4,50 +4,39 @@ import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.svg";
 
 import Nav from "../styled/nav";
-import Link from "../styled/a";
 import Image from "../styled/image";
 import Header from "../styled/header";
 import Footer from "../styled/footer";
 
 import Button from "../styled/button";
-import SideMenu from "../styled/aside";
+import Aside from "../styled/aside";
 
 export default () => {
-  const activeStyle = { backgroundColor: "black", color: "white" };
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(true);
+  const selected = { "border-radius": "3px", "box-shadow": "0 0 0 3px" };
 
   return (
-    <div>
-      <Button menuButton onClick={() => setIsSideMenuOpen(!isSideMenuOpen)}>
-        {isSideMenuOpen ? "x" : `=`}
-      </Button>
+    <>
       {isSideMenuOpen && (
-        <SideMenu>
+        <Aside>
           <Header>
             <Image src={logo} logoImage />
           </Header>
-          <Nav>
-            <NavLink to="/" exact activeStyle={activeStyle}>
-              <Link navLink>Home</Link>
-            </NavLink>
-            <NavLink to="/about" activeStyle={activeStyle}>
-              <Link navLink>About</Link>
-            </NavLink>
-            <NavLink to="/gallery" activeStyle={activeStyle}>
-              <Link navLink>Gallery</Link>
-            </NavLink>
-            <NavLink to="/shop" activeStyle={activeStyle}>
-              <Link navLink>Shop</Link>
-            </NavLink>
-            <NavLink to="/contact" activeStyle={activeStyle}>
-              <Link navLink>Contact</Link>
-            </NavLink>
+          <Nav mainNav>
+            <NavLink activeStyle={selected} children="Home" to="/" exact />
+            <NavLink activeStyle={selected} children="About" to="/about" />
+            <NavLink activeStyle={selected} children="Gallery" to="/gallery" />
+            <NavLink activeStyle={selected} children="Shop" to="/shop" />
+            <NavLink activeStyle={selected} children="Contact" to="/contact" />
           </Nav>
           <Footer>
             <Image src={logo} logoImage />
           </Footer>
-        </SideMenu>
+        </Aside>
       )}
-    </div>
+      <Button menuButton onClick={() => setIsSideMenuOpen(!isSideMenuOpen)}>
+        {isSideMenuOpen ? "x" : `=`}
+      </Button>
+    </>
   );
 };

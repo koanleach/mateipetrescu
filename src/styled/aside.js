@@ -1,9 +1,11 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export default styled.aside`
   display: flex;
   flex-direction: column;
-  background-color: lightblue;
-  width: 20vw;
+  justify-content: space-between;
+  background-color: lightsalmon;
+  width: 40vw;
+  transition: width 2s;
   height: 100vh;
 `;

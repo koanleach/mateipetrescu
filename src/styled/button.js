@@ -3,10 +3,13 @@ import styled, { css } from "styled-components";
 export default styled.button`
   width: 100px;
   height: 20px;
+  min-width: 50px;
+  min-height: 50px;
   cursor: pointer;
+  border-radius: 3px;
 
   ${(props) =>
-    props.primary &&
+    props.primaryButton &&
     css`
       background: lightcoral;
     `}
@@ -14,14 +17,13 @@ export default styled.button`
   ${(props) =>
     props.menuButton &&
     css`
-      position: fixed;
+      cursor: pointer;
       width: 50px;
       height: 50px;
       border-radius: 100%;
       background-color: black;
       color: white;
-      font-size: 38px;
-      left: 10vw;
-      top: 2vw;
+      border: none;
+      margin: 30px;
     `}
 `;

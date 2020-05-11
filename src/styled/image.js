@@ -1,12 +1,11 @@
 import styled, { css } from "styled-components";
 
 export default styled.img`
-  width: 100px;
-  padding: 10px;
+  margin: 3px;
 
   ${(props) =>
     props.logoImage &&
     css`
-        width: 20px;
+      width: 100px;
     `};
 `;

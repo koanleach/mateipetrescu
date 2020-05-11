@@ -5,14 +5,14 @@ import { BrowserRouter } from "react-router-dom";
 import NavMenu from "./components/side-menu";
 import MainContent from "./components/main-content";
 
-import Layout from "./styled/div";
+import Div from "./styled/div";
 
 render(
   <BrowserRouter>
-    <Layout>
+    <Div mainLayout>
       <NavMenu />
       <MainContent />
-    </Layout>
+    </Div>
   </BrowserRouter>,
   document.getElementById("root")
 );

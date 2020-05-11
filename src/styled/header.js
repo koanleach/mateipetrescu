@@ -1,9 +1,8 @@
 import styled, { css } from "styled-components";
 
 export default styled.header`
-  width: 100px;
-  cursor: pointer;
-
+  display: flex;
+  justify-content: center;
 
   ${(props) =>
     props.nav &&

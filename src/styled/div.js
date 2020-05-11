@@ -1,7 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export default styled.div`
   display: flex;
-  width: 900px;
-  height: 90vh;
+
+  ${(props) =>
+    props.mainLayout &&
+    css`
+      background-color: lightblue;
+    `};
 `;

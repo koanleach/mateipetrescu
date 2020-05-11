@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export default styled.a`
+export default styled.h1`
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   cursor: pointer;
