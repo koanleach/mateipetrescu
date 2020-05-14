@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { render } from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
@@ -6,13 +6,22 @@ import NavMenu from "./components/side-menu";
 import MainContent from "./components/main-content";
 
 import Div from "./styled/div";
+import Button from "./styled/button";
 
-render(
-  <BrowserRouter>
-    <Div mainLayout>
-      <NavMenu />
-      <MainContent />
-    </Div>
-  </BrowserRouter>,
-  document.getElementById("root")
-);
+const Index = () => {
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
+
+  return (
+    <BrowserRouter>
+      <Div mainLayout isSideMenuOpen={isSideMenuOpen}>
+        <NavMenu />
+        <Button menuButton onClick={() => setIsSideMenuOpen(!isSideMenuOpen)}>
+          {isSideMenuOpen ? "x" : `=`}
+        </Button>
+        <MainContent />
+      </Div>
+    </BrowserRouter>
+  );
+};
+
+render(<Index />, document.getElementById("root"));
