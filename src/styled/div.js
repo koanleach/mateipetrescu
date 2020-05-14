@@ -5,11 +5,10 @@ export default styled.div`
   transition: transform 0.5s;
   transform: translateX(-300px);
 
-
   ${(props) =>
     props.mainLayout &&
     css`
-      background-color: lightblue;
+      background-color: white;
     `};
 
   ${(props) =>

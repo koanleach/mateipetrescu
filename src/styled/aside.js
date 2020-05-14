@@ -5,6 +5,6 @@ export default styled.aside`
   flex-direction: column;
   justify-content: space-between;
   background-color: lightsalmon;
-  width: 400px;
+  min-width: 300px;
   height: 100vh;
 `;

@@ -11,7 +11,7 @@ import Div from "./styled/div";
 import Button from "./styled/button";
 
 const Index = () => {
-  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(true);
 
   return (
     <BrowserRouter>
@@ -27,4 +27,4 @@ const Index = () => {
   );
 };
 
-render(<Index />, document.getElementById("root"));
+render(<Index />, document.querySelector("base"));
