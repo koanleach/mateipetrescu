@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { render } from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
+import GlobalStyle from "./style";
+
 import NavMenu from "./components/side-menu";
 import MainContent from "./components/main-content";
 
@@ -13,6 +15,7 @@ const Index = () => {
 
   return (
     <BrowserRouter>
+      <GlobalStyle />
       <Div mainLayout isSideMenuOpen={isSideMenuOpen}>
         <NavMenu />
         <Button menuButton onClick={() => setIsSideMenuOpen(!isSideMenuOpen)}>
