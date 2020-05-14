@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export default styled.aside`
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

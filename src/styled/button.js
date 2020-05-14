@@ -18,6 +18,8 @@ export default styled.button`
     props.menuButton &&
     css`
       cursor: pointer;
+      position: sticky;
+      top: 30px;
       width: 50px;
       height: 50px;
       border-radius: 100%;
