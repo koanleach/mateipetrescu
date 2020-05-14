@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export default styled.img`
-  margin: 3px;
+  margin: 10px;
 
   ${(props) =>
     props.logoImage &&

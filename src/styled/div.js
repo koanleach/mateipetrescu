@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export default styled.div`
   display: flex;
   transition: transform 0.5s;
-  transform: translateX(-300px);
+  transform: translateX(-20vw);
 
   ${(props) =>
     props.mainLayout &&

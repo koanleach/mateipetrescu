@@ -1,6 +1,7 @@
+import { NavLink } from "react-router-dom";
 import styled, { css } from "styled-components";
 
-export default styled.a`
+export default styled(NavLink)`
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
@@ -9,10 +10,10 @@ export default styled.a`
   cursor: pointer;
   padding: 10px;
   margin: 10px;
-  transition: transform 0.2s;
 
   &:hover {
-    transform: scale(2);
-    transition: transform 0.2s;
+    border-radius: 3px;
+    box-shadow: 0 0 0 3px;
   }
 `;
+
