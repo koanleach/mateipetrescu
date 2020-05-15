@@ -8,4 +8,10 @@ export default styled.img`
     css`
       width: 100px;
     `};
+
+  ${(props) =>
+    props.socialIcon &&
+    css`
+      width: 40px;
+    `};
 `;

@@ -2,12 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import logo from "../assets/logo.png";
+import instagramIcon from "../assets/instagram.svg";
+import facebookIcon from "../assets/facebook.svg";
 
 import Nav from "../styled/nav";
 import Image from "../styled/image";
 import Header from "../styled/header";
 import Footer from "../styled/footer";
-
 import Aside from "../styled/aside";
 import URL from "../styled/a";
 
@@ -32,10 +33,12 @@ export default () => {
 
       <Footer>
         <Nav socialNav>
-          <URL href="https://www.facebook.com/matei.petrescu.1">In</URL>
-          <URL href="https://www.facebook.com/matei.petrescu.1">Li</URL>
-          <URL href="https://www.facebook.com/matei.petrescu.1">Fb</URL>
-          <URL href="https://www.facebook.com/matei.petrescu.1">Tw</URL>
+          <URL href="https://www.facebook.com/matei.petrescu.1">
+            <Image src={instagramIcon} socialIcon />
+          </URL>
+          <URL href="https://www.facebook.com/matei.petrescu.1">
+            <Image src={facebookIcon} socialIcon />
+          </URL>
         </Nav>
       </Footer>
     </Aside>

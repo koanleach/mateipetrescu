@@ -10,4 +10,11 @@ export default styled.nav`
     css`
       flex-direction: column;
     `}
+
+  ${(props) =>
+    props.socialNav &&
+    css`
+      flex-direction: row;
+      background: "green";Î
+    `}
 `;
