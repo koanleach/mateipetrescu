@@ -16,4 +16,3 @@ export default styled(NavLink)`
     box-shadow: 0 0 0 3px;
   }
 `;
-

@@ -12,7 +12,7 @@ export default styled.a`
   transition: transform 0.2s;
 
   &:hover {
-    transform: scale(2);
+    transform: scale(1.3);
     transition: transform 0.2s;
   }
 `;

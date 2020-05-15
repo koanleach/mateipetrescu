@@ -15,6 +15,8 @@ export default styled.nav`
     props.socialNav &&
     css`
       flex-direction: row;
-      background: "green";Î
+      justify-content: space-around;
+      padding: 0 50px;
+
     `}
 `;

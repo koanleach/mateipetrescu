@@ -1,8 +1,12 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 export default () => {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Matei | About</title>
+      </Helmet>
       <h2>About Page with Lorem Ipsum</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean justo
@@ -77,8 +81,8 @@ export default () => {
         Sed scelerisque finibus tortor, sed consectetur justo interdum id.
         Vestibulum euismod vehicula purus, vel maximus sem bibendum volutpat.
         Suspendisse lectus leo, cursus eget elementum non, volutpat sit amet
-        ipsum. 
+        ipsum.
       </p>
-    </div>
+    </>
   );
 };

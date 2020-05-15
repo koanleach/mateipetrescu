@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 import About from "./about";
 import Gallery from "./gallery";
@@ -7,11 +8,14 @@ import Contact from "./contact";
 
 export default () => {
   return (
-    <div>
+    <>
       <About />
       <Gallery />
       <Shop />
       <Contact />
-    </div>
+      <Helmet>
+        <title>Matei | Home</title>
+      </Helmet>
+    </>
   );
 };
