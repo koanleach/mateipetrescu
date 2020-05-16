@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 import logo from "../assets/logo.svg";
 import instagramIcon from "../assets/instagram.svg";
@@ -17,7 +16,7 @@ import H1 from "../styled/h1";
 import Link from "./nav-link";
 
 export default () => {
-  const selected = { "border-radius": "3px", "box-shadow": "0 0 0 3px" };
+  const selected = { borderRadius: 3, boxShadow: `0 0 0 3` };
 
   return (
     <Aside>
@@ -51,7 +50,13 @@ export default () => {
             />
           </URL>
         </Nav>
-        <P smallText>Made with ❤️ in Copenhagen</P>
+        <P smallText>
+          Made with{" "}
+          <span role="img" aria-label="love">
+            ❤️
+          </span>{" "}
+          in Copenhagen
+        </P>
       </Footer>
     </Aside>
   );
